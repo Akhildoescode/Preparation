@@ -7,7 +7,9 @@ import {
   defaultProgress,
   defaultState,
   loadState,
+  loadStateFromCloud,
   saveState,
+  saveStateToCloud,
 } from '@/lib/storage';
 import { advanceSchedule, ensureScheduled } from '@/lib/spaced-rep';
 
@@ -19,22 +21,25 @@ export function useAppState() {
   const [state, setState] = useState<AppState>(defaultState);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Load from localStorage on mount
+  // Load from localStorage immediately, then sync from cloud
   useEffect(() => {
-    const loaded = loadState();
-    if (!loaded.startedAt) {
-      loaded.startedAt = new Date().toISOString();
-    }
-    startTransition(() => {
-      setState(loaded);
+    const local = loadState();
+    if (!local.startedAt) local.startedAt = new Date().toISOString();
+    startTransition(() => setState(local));
+
+    loadStateFromCloud().then((cloud) => {
+      if (cloud) {
+        startTransition(() => setState((prev) => ({ ...prev, ...cloud })));
+      }
     });
   }, []);
 
-  // Debounced save whenever state changes
+  // Debounced save to localStorage and cloud whenever state changes
   useEffect(() => {
     if (saveTimer.current) clearTimeout(saveTimer.current);
     saveTimer.current = setTimeout(() => {
       saveState(state);
+      saveStateToCloud(state);
     }, DEBOUNCE_MS);
     return () => {
       if (saveTimer.current) clearTimeout(saveTimer.current);
