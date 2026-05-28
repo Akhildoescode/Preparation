@@ -1,0 +1,242 @@
+[
+  {
+    "id": "array-sum",
+    "label": "Array Sum",
+    "snippet": "int sum = 0;\nfor (int x : arr) {\n    sum += x;\n}\nreturn sum;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Single pass through n elements. No auxiliary data structure — just one integer variable."
+  },
+  {
+    "id": "binary-search",
+    "label": "Binary Search (Iterative)",
+    "snippet": "int lo = 0, hi = arr.length - 1;\nwhile (lo <= hi) {\n    int mid = lo + (hi - lo) / 2;\n    if (arr[mid] == target) return mid;\n    else if (arr[mid] < target) lo = mid + 1;\n    else hi = mid - 1;\n}\nreturn -1;",
+    "timeAnswer": "O(log n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Each iteration halves the search space → O(log n) iterations. Two integer pointers are the only extra memory."
+  },
+  {
+    "id": "nested-brute-force",
+    "label": "Brute-Force Pair Check",
+    "snippet": "for (int i = 0; i < n; i++) {\n    for (int j = i + 1; j < n; j++) {\n        if (arr[i] + arr[j] == target) return true;\n    }\n}\nreturn false;",
+    "timeAnswer": "O(n²)",
+    "spaceAnswer": "O(1)",
+    "explanation": "The inner loop runs up to n times for each of n outer iterations → n(n-1)/2 ≈ n² pairs checked. No extra space."
+  },
+  {
+    "id": "hashmap-two-sum",
+    "label": "Two Sum with HashMap",
+    "snippet": "Map<Integer, Integer> seen = new HashMap<>();\nfor (int x : arr) {\n    if (seen.containsKey(target - x)) return true;\n    seen.put(x, 1);\n}\nreturn false;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Single pass; each HashMap operation is O(1) amortized. The map stores at most n entries in the worst case."
+  },
+  {
+    "id": "fib-naive",
+    "label": "Fibonacci (Naive Recursive)",
+    "snippet": "int fib(int n) {\n    if (n <= 1) return n;\n    return fib(n - 1) + fib(n - 2);\n}",
+    "timeAnswer": "O(2^n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Each call branches into two, creating a binary call tree of depth n → roughly 2^n calls total. The call stack depth is at most n."
+  },
+  {
+    "id": "merge-sort",
+    "label": "Merge Sort",
+    "snippet": "void mergeSort(int[] arr, int lo, int hi) {\n    if (lo >= hi) return;\n    int mid = lo + (hi - lo) / 2;\n    mergeSort(arr, lo, mid);\n    mergeSort(arr, mid + 1, hi);\n    merge(arr, lo, mid, hi);  // O(n) aux space\n}",
+    "timeAnswer": "O(n log n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "The tree has log n levels; each level merges a total of n elements → O(n log n) work. The merge step requires O(n) auxiliary buffer."
+  },
+  {
+    "id": "subsets-backtrack",
+    "label": "Subsets (Backtracking)",
+    "snippet": "void backtrack(int[] nums, int start,\n               List<Integer> cur,\n               List<List<Integer>> res) {\n    res.add(new ArrayList<>(cur));\n    for (int i = start; i < nums.length; i++) {\n        cur.add(nums[i]);\n        backtrack(nums, i + 1, cur, res);\n        cur.removeLast();\n    }\n}",
+    "timeAnswer": "O(2^n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Each element is either included or excluded → 2^n subsets generated. Recursion depth is at most n."
+  },
+  {
+    "id": "permutations",
+    "label": "Generate All Permutations",
+    "snippet": "void permute(int[] nums, int start,\n             List<int[]> res) {\n    if (start == nums.length) {\n        res.add(nums.clone());\n        return;\n    }\n    for (int i = start; i < nums.length; i++) {\n        swap(nums, start, i);\n        permute(nums, start + 1, res);\n        swap(nums, start, i);\n    }\n}",
+    "timeAnswer": "O(n!)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Generates all n! orderings. The recursion depth equals n (one level per position placed)."
+  },
+  {
+    "id": "prefix-sum",
+    "label": "Build Prefix Sum Array",
+    "snippet": "int[] prefix = new int[arr.length + 1];\nfor (int i = 0; i < arr.length; i++) {\n    prefix[i + 1] = prefix[i] + arr[i];\n}\nreturn prefix;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Single pass to fill the array. Output array of size n+1 is the dominant space cost."
+  },
+  {
+    "id": "arrays-sort-scan",
+    "label": "Sort Then Linear Scan",
+    "snippet": "Arrays.sort(arr);\nint unique = 0;\nfor (int i = 1; i < arr.length; i++) {\n    if (arr[i] != arr[i - 1]) unique++;\n}\nreturn unique + 1;",
+    "timeAnswer": "O(n log n)",
+    "spaceAnswer": "O(log n)",
+    "explanation": "Java's Arrays.sort uses dual-pivot quicksort: O(n log n) time, O(log n) recursion depth. The subsequent linear scan is dominated by the sort."
+  },
+  {
+    "id": "freq-map",
+    "label": "Character Frequency Map",
+    "snippet": "Map<Character, Integer> freq = new HashMap<>();\nfor (char c : s.toCharArray()) {\n    freq.merge(c, 1, Integer::sum);\n}\nreturn freq;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "One pass of length n. The map holds at most n entries (or 26 if input is restricted to lowercase letters, but canonical analysis is O(n))."
+  },
+  {
+    "id": "two-pointers-palindrome",
+    "label": "Palindrome Check (Two Pointers)",
+    "snippet": "int lo = 0, hi = s.length() - 1;\nwhile (lo < hi) {\n    if (s.charAt(lo) != s.charAt(hi)) return false;\n    lo++;\n    hi--;\n}\nreturn true;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Two pointers each move at most n/2 steps → O(n) comparisons total. No auxiliary memory beyond two integer indices."
+  },
+  {
+    "id": "bfs-tree",
+    "label": "BFS Level-Order Traversal",
+    "snippet": "Queue<TreeNode> q = new ArrayDeque<>();\nq.offer(root);\nwhile (!q.isEmpty()) {\n    TreeNode node = q.poll();\n    visit(node);\n    if (node.left  != null) q.offer(node.left);\n    if (node.right != null) q.offer(node.right);\n}",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Each of the n nodes is enqueued and dequeued exactly once. The queue holds up to O(n) nodes (the last level of a complete binary tree has n/2 nodes)."
+  },
+  {
+    "id": "string-concat-loop",
+    "label": "String Concat in a Loop",
+    "snippet": "String result = \"\";\nfor (String word : words) {\n    result += word;  // new String object each iteration\n}\nreturn result;",
+    "timeAnswer": "O(n²)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Java Strings are immutable. Each `+=` copies the accumulated string → 1+2+…+n chars copied → O(n²). The final string is O(n) space. Always use StringBuilder instead."
+  },
+  {
+    "id": "stringbuilder-concat",
+    "label": "StringBuilder Concatenation",
+    "snippet": "var sb = new StringBuilder();\nfor (String word : words) {\n    sb.append(word);\n}\nreturn sb.toString();",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "StringBuilder amortizes appends — total characters written across all calls is n. The internal buffer (O(n)) is returned directly by toString()."
+  },
+  {
+    "id": "2d-dp-lcs",
+    "label": "2D DP Table (LCS-style)",
+    "snippet": "int[][] dp = new int[m + 1][n + 1];\nfor (int i = 1; i <= m; i++) {\n    for (int j = 1; j <= n; j++) {\n        if (s.charAt(i-1) == t.charAt(j-1))\n            dp[i][j] = dp[i-1][j-1] + 1;\n        else\n            dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);\n    }\n}\nreturn dp[m][n];",
+    "timeAnswer": "O(n²)",
+    "spaceAnswer": "O(n²)",
+    "explanation": "Fills an m×n table (assume m ≈ n). Each cell takes O(1). The table itself occupies n² space."
+  },
+  {
+    "id": "dfs-tree-height",
+    "label": "Recursive Tree Height (DFS)",
+    "snippet": "int height(TreeNode node) {\n    if (node == null) return 0;\n    int left  = height(node.left);\n    int right = height(node.right);\n    return 1 + Math.max(left, right);\n}",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(log n)",
+    "explanation": "Visits every node once → O(n). For a balanced tree the recursion stack depth equals the height, which is O(log n). (Worst case for a skewed tree is O(n).)"
+  },
+  {
+    "id": "top-k-heap",
+    "label": "Top-K with Min-Heap",
+    "snippet": "PriorityQueue<Integer> pq = new PriorityQueue<>();\nfor (int x : arr) {\n    pq.offer(x);\n    if (pq.size() > k) pq.poll();\n}\nreturn new ArrayList<>(pq);",
+    "timeAnswer": "O(n log n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "n offers/polls on a heap that grows up to k (and up to n when k≈n) → O(n log k). With k≈n this is O(n log n). Heap holds at most k ≈ n entries."
+  },
+  {
+    "id": "counting-bits-dp",
+    "label": "Counting Bits 0..n (DP)",
+    "snippet": "int[] bits = new int[n + 1];\nfor (int i = 1; i <= n; i++) {\n    bits[i] = bits[i >> 1] + (i & 1);\n}\nreturn bits;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Computes popcount for each 0..n in one pass using a DP recurrence. The output array has n+1 elements."
+  },
+  {
+    "id": "gaussian-formula",
+    "label": "Gaussian Sum Formula",
+    "snippet": "// Sum of integers 1..n\nreturn (long) n * (n + 1) / 2;",
+    "timeAnswer": "O(1)",
+    "spaceAnswer": "O(1)",
+    "explanation": "One multiplication, one addition, one division — all independent of n. Zero allocations."
+  },
+  {
+    "id": "power-of-two",
+    "label": "Power-of-Two Bit Trick",
+    "snippet": "boolean isPowerOfTwo(int n) {\n    return n > 0 && (n & (n - 1)) == 0;\n}",
+    "timeAnswer": "O(1)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Two bitwise operations regardless of n. A power of two has exactly one 1-bit; n & (n-1) clears it, leaving zero."
+  },
+  {
+    "id": "count-set-bits",
+    "label": "Count Set Bits (Brian Kernighan)",
+    "snippet": "int popcount(int n) {\n    int count = 0;\n    while (n != 0) {\n        n &= (n - 1);  // clears lowest set bit\n        count++;\n    }\n    return count;\n}",
+    "timeAnswer": "O(log n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Iterates once per set bit. An integer n has at most ⌊log₂ n⌋ + 1 bits, so the loop runs O(log n) times. No auxiliary memory."
+  },
+  {
+    "id": "sliding-window-max",
+    "label": "Sliding Window Sum",
+    "snippet": "int windowSum = 0;\nfor (int i = 0; i < k; i++) windowSum += arr[i];\nint maxSum = windowSum;\nfor (int i = k; i < arr.length; i++) {\n    windowSum += arr[i] - arr[i - k];\n    maxSum = Math.max(maxSum, windowSum);\n}\nreturn maxSum;",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Two sequential passes (both O(n)). The window is maintained with constant-time addition and subtraction. No extra arrays."
+  },
+  {
+    "id": "gcd-euclid",
+    "label": "GCD (Euclidean Algorithm)",
+    "snippet": "int gcd(int a, int b) {\n    while (b != 0) {\n        int tmp = b;\n        b = a % b;\n        a = tmp;\n    }\n    return a;\n}",
+    "timeAnswer": "O(log n)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Each iteration reduces the problem size by at least half (Fibonacci worst case) → O(log min(a,b)) iterations. Three integer variables only."
+  },
+  {
+    "id": "selection-sort",
+    "label": "Selection Sort",
+    "snippet": "for (int i = 0; i < n - 1; i++) {\n    int minIdx = i;\n    for (int j = i + 1; j < n; j++) {\n        if (arr[j] < arr[minIdx]) minIdx = j;\n    }\n    swap(arr, i, minIdx);\n}",
+    "timeAnswer": "O(n²)",
+    "spaceAnswer": "O(1)",
+    "explanation": "Two nested loops — outer runs n-1 times, inner scans the unsorted suffix → n(n-1)/2 comparisons. Swap is in-place: O(1) space."
+  },
+  {
+    "id": "union-find",
+    "label": "Union-Find (Path Compression)",
+    "snippet": "int find(int[] parent, int x) {\n    if (parent[x] != x)\n        parent[x] = find(parent, parent[x]);  // path compression\n    return parent[x];\n}",
+    "timeAnswer": "O(log n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "With path compression (and union by rank) each operation is nearly O(1) amortized — technically O(α(n)) which is effectively O(log n) in practice. The parent array is O(n)."
+  },
+  {
+    "id": "dp-1d-stairs",
+    "label": "1D DP (Climbing Stairs)",
+    "snippet": "int[] dp = new int[n + 1];\ndp[0] = 1;\ndp[1] = 1;\nfor (int i = 2; i <= n; i++) {\n    dp[i] = dp[i - 1] + dp[i - 2];\n}\nreturn dp[n];",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Single loop from 2 to n. The DP array of size n+1 is the dominant space cost. (Can be reduced to O(1) space with two variables.)"
+  },
+  {
+    "id": "matrix-fill",
+    "label": "Fill n×n Identity Matrix",
+    "snippet": "int[][] matrix = new int[n][n];\nfor (int i = 0; i < n; i++) {\n    for (int j = 0; j < n; j++) {\n        matrix[i][j] = (i == j) ? 1 : 0;\n    }\n}\nreturn matrix;",
+    "timeAnswer": "O(n²)",
+    "spaceAnswer": "O(n²)",
+    "explanation": "Every cell of an n×n matrix is visited once → n² iterations. The output matrix itself occupies n² space."
+  },
+  {
+    "id": "fib-memoized",
+    "label": "Fibonacci (Memoized)",
+    "snippet": "Map<Integer, Long> memo = new HashMap<>();\nlong fib(int n) {\n    if (n <= 1) return n;\n    if (memo.containsKey(n)) return memo.get(n);\n    long result = fib(n - 1) + fib(n - 2);\n    memo.put(n, result);\n    return result;\n}",
+    "timeAnswer": "O(n)",
+    "spaceAnswer": "O(n)",
+    "explanation": "Each distinct subproblem fib(0)..fib(n) is computed exactly once → n unique calls. Both the memo map and the recursion stack store up to n entries."
+  },
+  {
+    "id": "n-queens",
+    "label": "N-Queens (Backtracking)",
+    "snippet": "void solve(int row, int n,\n           boolean[] cols, boolean[] d1, boolean[] d2,\n           List<List<Integer>> res) {\n    if (row == n) { res.add(buildSolution()); return; }\n    for (int col = 0; col < n; col++) {\n        if (cols[col] || d1[row-col+n] || d2[row+col]) continue;\n        cols[col] = d1[row-col+n] = d2[row+col] = true;\n        solve(row + 1, n, cols, d1, d2, res);\n        cols[col] = d1[row-col+n] = d2[row+col] = false;\n    }\n}",
+    "timeAnswer": "O(n!)",
+    "spaceAnswer": "O(n)",
+    "explanation": "In the worst case the algorithm explores n × (n-1) × … × 1 = n! placement paths. The recursion depth is n; the boolean arrays are fixed at O(n)."
+  }
+]

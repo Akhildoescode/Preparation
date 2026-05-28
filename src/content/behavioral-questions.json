@@ -1,0 +1,452 @@
+[
+  {
+    "id": "lead-01",
+    "question": "Tell me about a time you pushed back on your tech lead's technical direction when you believed it would cause significant problems down the road.",
+    "competency": "leadership",
+    "tip": "Google wants to see that you advocate for correctness with data and reasoning, not ego — and that you know when to escalate versus accept a decision.",
+    "followUps": [
+      "How did you gather evidence to support your position before raising the concern?",
+      "Looking back, what would you do differently in how you framed the disagreement?"
+    ]
+  },
+  {
+    "id": "lead-02",
+    "question": "Describe a situation where you had to drive alignment across three or more engineers who disagreed on an architectural approach, without having formal authority over any of them.",
+    "competency": "leadership",
+    "tip": "Google evaluates whether you can lead through influence: facilitating structured discussion, finding common ground, and moving a group to a decision.",
+    "followUps": [
+      "What specific techniques did you use to surface the root of the disagreement rather than just the surface opinions?",
+      "How did you ensure the people who lost the vote stayed bought-in after the decision?"
+    ]
+  },
+  {
+    "id": "lead-03",
+    "question": "Tell me about a project you owned end-to-end where the scope unexpectedly doubled mid-delivery. How did you handle the change without slipping the deadline?",
+    "competency": "leadership",
+    "tip": "Google is assessing your ability to prioritize ruthlessly under pressure — they want to see triage decisions, not heroics.",
+    "followUps": [
+      "What did you cut, and how did you communicate the trade-off to stakeholders?",
+      "How did you re-scope the work in a way that kept the team motivated rather than demoralized?"
+    ]
+  },
+  {
+    "id": "lead-04",
+    "question": "Give me an example of a time you spotted a systemic problem in your team's codebase that nobody had prioritized and drove it to resolution without being asked.",
+    "competency": "leadership",
+    "tip": "Google values engineers who treat the codebase as their own — they want evidence you proactively improve the environment, not just ship features.",
+    "followUps": [
+      "How did you build a business case or sense of urgency to get time allocated for the fix?",
+      "What did you learn about persuading people to invest in invisible quality work?"
+    ]
+  },
+  {
+    "id": "lead-05",
+    "question": "Tell me about a time you had to step up and make a high-stakes technical decision when your manager was unavailable and waiting wasn't an option.",
+    "competency": "leadership",
+    "tip": "Google wants to see calm, structured decision-making under pressure — clear risk assessment, reversible vs. irreversible choices, and ownership of the outcome.",
+    "followUps": [
+      "What information did you prioritize gathering in the limited time available?",
+      "How did you document and communicate the decision to your manager afterward?"
+    ]
+  },
+  {
+    "id": "lead-06",
+    "question": "Describe a time you mentored a junior engineer through a difficult technical problem where simply giving them the answer would have been faster. Why did you choose the harder path?",
+    "competency": "leadership",
+    "tip": "Google assesses whether you invest in long-term team capability, not just short-term throughput — they want to see deliberate coaching behavior.",
+    "followUps": [
+      "How did you calibrate how much to guide versus how much to let them struggle productively?",
+      "What was the measurable outcome for that engineer over the following weeks?"
+    ]
+  },
+  {
+    "id": "lead-07",
+    "question": "Tell me about a time you set a technical standard or process for your team that others were initially resistant to. How did you get adoption?",
+    "competency": "leadership",
+    "tip": "Google looks for engineers who can change engineering culture through demonstration and collaboration, not mandate — showing the value before demanding the change.",
+    "followUps": [
+      "How did you distinguish resistance rooted in legitimate concerns from resistance rooted in inertia?",
+      "How did you measure whether the standard actually delivered the outcomes you expected?"
+    ]
+  },
+  {
+    "id": "lead-08",
+    "question": "Give me an example of a time you recognized that a teammate was struggling and took action to support them before it became a visible problem for the team.",
+    "competency": "leadership",
+    "tip": "Google evaluates emotional intelligence alongside technical leadership — noticing, acting, and doing so in a way that preserves the person's dignity and autonomy.",
+    "followUps": [
+      "How did you approach the conversation without making the person feel singled out or judged?",
+      "What did you do to make sure the support was sustainable, not a one-time fix?"
+    ]
+  },
+  {
+    "id": "ps-01",
+    "question": "Walk me through a time you were handed a bug that had been open for two weeks and nobody could reproduce it. How did you approach the investigation?",
+    "competency": "problem_solving",
+    "tip": "Google wants systematic debugging: hypothesis formation, isolation, instrumentation — not random trial and error.",
+    "followUps": [
+      "At what point did you decide your original hypothesis was wrong, and what triggered that pivot?",
+      "What monitoring or logging did you add so this class of bug would be easier to diagnose in the future?"
+    ]
+  },
+  {
+    "id": "ps-02",
+    "question": "Tell me about a time you had to design a solution under significant constraints — tight deadline, limited compute, or an unfamiliar codebase — and the first approach you tried didn't work.",
+    "competency": "problem_solving",
+    "tip": "Google assesses adaptability in problem-solving: do you iterate deliberately with learning, or thrash randomly when a plan fails?",
+    "followUps": [
+      "How did you decide when to abandon the first approach rather than continue refining it?",
+      "What did the failure of the first approach teach you that directly shaped the second one?"
+    ]
+  },
+  {
+    "id": "ps-03",
+    "question": "Describe a technical problem where you had to simplify your mental model significantly to make progress — you were overthinking it. What triggered the shift?",
+    "competency": "problem_solving",
+    "tip": "Google values engineers who recognize when complexity is self-imposed and can step back to find the elegant core of a problem.",
+    "followUps": [
+      "What heuristic or framework helped you step back and reframe the problem?",
+      "How do you now proactively guard against over-engineering at the start of a design?"
+    ]
+  },
+  {
+    "id": "ps-04",
+    "question": "Tell me about a time you disagreed with your tech lead's estimate on a project you were accountable for, and had data to support a different number.",
+    "competency": "problem_solving",
+    "tip": "Google wants to see that you separate your position from your identity and update beliefs based on data — and that you express disagreement constructively.",
+    "followUps": [
+      "How did you present the conflicting data without making it feel like an attack on the other estimate?",
+      "What was the outcome, and how did the actual timeline compare to both estimates?"
+    ]
+  },
+  {
+    "id": "ps-05",
+    "question": "Give me an example of a time you were working on a feature and discovered mid-implementation that the requirements were technically impossible as written. What did you do?",
+    "competency": "problem_solving",
+    "tip": "Google wants engineers who can identify constraint violations early, propose alternatives, and negotiate changes rather than silently building something wrong.",
+    "followUps": [
+      "How did you validate your conclusion that the requirement was impossible before raising it?",
+      "How did you present the alternatives in a way that kept the product team's core goal intact?"
+    ]
+  },
+  {
+    "id": "ps-06",
+    "question": "Tell me about a time you had to make a significant architectural decision with incomplete information and a hard deadline. How did you decide what 'good enough' looked like?",
+    "competency": "problem_solving",
+    "tip": "Google assesses your ability to define and honor explicit decision criteria rather than drifting — they want to see that you named your uncertainty and acted anyway.",
+    "followUps": [
+      "What was the riskiest assumption in your decision, and how did you mitigate it?",
+      "How did you build in a revisit point so the decision could be reversed if that assumption proved wrong?"
+    ]
+  },
+  {
+    "id": "ps-07",
+    "question": "Describe a time you solved a performance problem that had stumped your team by looking at the problem from a completely different angle.",
+    "competency": "problem_solving",
+    "tip": "Google values creative problem-solving that draws on first principles — they want to see you challenge assumptions, not just apply known patterns.",
+    "followUps": [
+      "What assumption did the rest of the team share that you decided to question?",
+      "How did you validate that your alternative framing was actually more productive before investing time in it?"
+    ]
+  },
+  {
+    "id": "ps-08",
+    "question": "Tell me about a time you had to debug a production incident under pressure with incomplete observability. Walk me through your decision-making minute by minute.",
+    "competency": "problem_solving",
+    "tip": "Google is evaluating incident response skills: calm under pressure, structured isolation, and clear communication to stakeholders while the investigation is active.",
+    "followUps": [
+      "How did you balance the pressure to restore service immediately against the need to understand root cause?",
+      "What did you add to your observability stack afterward to cut the diagnosis time next time?"
+    ]
+  },
+  {
+    "id": "comm-01",
+    "question": "Tell me about a time you had to explain a complex technical trade-off to a non-technical stakeholder who kept pushing for the simpler-sounding option.",
+    "competency": "communication",
+    "tip": "Google assesses whether you can translate technical risk into business terms without condescension — the goal is shared understanding, not winning the argument.",
+    "followUps": [
+      "How did you gauge whether the stakeholder actually understood the trade-off versus just agreeing to end the conversation?",
+      "What analogy or framing turned out to be most effective, and how did you arrive at it?"
+    ]
+  },
+  {
+    "id": "comm-02",
+    "question": "Describe a time when you had to write a design doc that changed the minds of reviewers who came in skeptical of your approach.",
+    "competency": "communication",
+    "tip": "Google values written communication that anticipates objections and addresses them proactively — they want to see that you understand your audience before you write.",
+    "followUps": [
+      "How did you identify what the reviewers' specific concerns were before writing?",
+      "What section of the doc do you think did the most work in shifting opinion, and why?"
+    ]
+  },
+  {
+    "id": "comm-03",
+    "question": "Tell me about a time you delivered critical feedback to a peer that they initially pushed back on but later said was valuable. How did you frame it?",
+    "competency": "communication",
+    "tip": "Google evaluates the ability to give feedback that's specific, behavior-focused, and actionable — not vague praise or blunt criticism.",
+    "followUps": [
+      "How did you decide the timing and setting for the conversation?",
+      "What specifically in your framing helped the person receive the feedback rather than get defensive?"
+    ]
+  },
+  {
+    "id": "comm-04",
+    "question": "Give me an example of a time you presented engineering progress in a team meeting and realized partway through that you were losing your audience. What did you do?",
+    "competency": "communication",
+    "tip": "Google wants to see real-time audience awareness and the ability to pivot a communication style mid-delivery without losing credibility.",
+    "followUps": [
+      "What signals told you that the audience was disengaging?",
+      "How did you recalibrate your presentation in the moment without making it awkward?"
+    ]
+  },
+  {
+    "id": "comm-05",
+    "question": "Describe a time you had to deliver bad news to your team — a missed deadline, a reverted feature, or a cut scope — in a way that kept morale intact.",
+    "competency": "communication",
+    "tip": "Google looks for honest, direct communication that respects the team's intelligence while maintaining forward momentum — no sugarcoating, but no doom-and-gloom either.",
+    "followUps": [
+      "How did you balance transparency about what went wrong with not assigning blame publicly?",
+      "What follow-up actions did you commit to, and how did you track accountability?"
+    ]
+  },
+  {
+    "id": "comm-06",
+    "question": "Tell me about a time you wrote a postmortem for a significant incident and had to communicate findings to leadership who wanted someone blamed, while you believed the root cause was systemic.",
+    "competency": "communication",
+    "tip": "Google values blameless culture articulated with confidence — they want to see you advocate for systems thinking while still being credible and concrete.",
+    "followUps": [
+      "How did you frame systemic root causes in a way that still felt actionable to leadership?",
+      "What pushback did you get, and how did you respond to pressure to name individuals?"
+    ]
+  },
+  {
+    "id": "comm-07",
+    "question": "Give me an example of a time you successfully negotiated a change in requirements by making a compelling case through data and user impact rather than just technical preference.",
+    "competency": "communication",
+    "tip": "Google wants engineers who speak the product team's language — frame requests in terms of user outcomes and business risk, not engineering elegance.",
+    "followUps": [
+      "What data or evidence did you bring to the conversation, and how did you gather it quickly?",
+      "How did you make sure the product team felt heard rather than steamrolled?"
+    ]
+  },
+  {
+    "id": "collab-01",
+    "question": "Tell me about a time you had to collaborate closely with an engineer whose coding standards and practices were significantly different from yours on a shared codebase.",
+    "competency": "collaboration",
+    "tip": "Google assesses whether you can find common ground on standards without ego — they want to see you elevate the shared outcome over personal style preferences.",
+    "followUps": [
+      "How did you distinguish differences that mattered for quality from differences that were purely stylistic?",
+      "What did you end up learning from their approach that changed how you work?"
+    ]
+  },
+  {
+    "id": "collab-02",
+    "question": "Describe a time you worked on a cross-functional project where a dependency on another team was blocking your progress and escalating didn't feel appropriate.",
+    "competency": "collaboration",
+    "tip": "Google values engineers who find creative ways to unblock themselves while maintaining healthy inter-team relationships — not passive waiting or aggressive escalation.",
+    "followUps": [
+      "How did you make the other team's problem feel shared rather than framing it as their failure?",
+      "What did you build or change in how you managed inter-team dependencies going forward?"
+    ]
+  },
+  {
+    "id": "collab-03",
+    "question": "Tell me about a time you disagreed strongly with a code review comment and the reviewer didn't back down. How did you resolve it?",
+    "competency": "collaboration",
+    "tip": "Google looks for engineers who can hold technical ground with evidence while staying open to being wrong — the goal is the best code, not winning.",
+    "followUps": [
+      "How did you separate the technical argument from the personal dynamic?",
+      "Did the resolution change how you approach code reviews as a reviewer yourself?"
+    ]
+  },
+  {
+    "id": "collab-04",
+    "question": "Give me an example of a time you proactively helped a teammate who was blocked on a problem outside your immediate area of responsibility.",
+    "competency": "collaboration",
+    "tip": "Google values the 'team success over individual contribution' mindset — they want to see you notice when someone needs help and act before being asked.",
+    "followUps": [
+      "How did you balance helping them versus your own priorities at that moment?",
+      "Did this change how you structure your team's norms around asking for help?"
+    ]
+  },
+  {
+    "id": "collab-05",
+    "question": "Describe a time you were part of a team that shipped something you had significant reservations about. How did you handle your objections after the team decided to proceed?",
+    "competency": "collaboration",
+    "tip": "Google wants to see the 'disagree and commit' principle in action — you raised your concern clearly, the team decided, and you executed with full effort.",
+    "followUps": [
+      "How did you make sure your continued reservations didn't undermine the team's momentum?",
+      "What happened — were your concerns validated, and how did you handle that outcome either way?"
+    ]
+  },
+  {
+    "id": "collab-06",
+    "question": "Tell me about a time you onboarded onto a team mid-project and had to quickly earn trust from engineers who had been building it from the start.",
+    "competency": "collaboration",
+    "tip": "Google evaluates how you build relationships and credibility quickly — by demonstrating competence through small wins and humility about what you don't yet know.",
+    "followUps": [
+      "What was your strategy for choosing your first contributions to maximize visibility without stepping on toes?",
+      "Looking back, was there something you did that was actually counterproductive in the first few weeks?"
+    ]
+  },
+  {
+    "id": "collab-07",
+    "question": "Give me an example of a time a cross-team project you were part of was at risk of failing due to misaligned priorities. What specific action did you take?",
+    "competency": "collaboration",
+    "tip": "Google assesses your ability to drive alignment by surfacing competing priorities explicitly rather than letting them fester into a miss.",
+    "followUps": [
+      "How did you get both teams to the table without making either feel blamed?",
+      "What structural change did you propose so the same misalignment wouldn't happen on the next project?"
+    ]
+  },
+  {
+    "id": "collab-08",
+    "question": "Tell me about a time you shared expertise with another team proactively — not because you were asked, but because you saw they were about to make a costly mistake.",
+    "competency": "collaboration",
+    "tip": "Google values engineers who treat org-wide success as their own — sharing knowledge generously, even across team boundaries, before being prompted.",
+    "followUps": [
+      "How did you frame the offer to help so it didn't come across as condescending or intrusive?",
+      "What did you learn about how other teams think about the problem space that you wouldn't have known otherwise?"
+    ]
+  },
+  {
+    "id": "adapt-01",
+    "question": "Tell me about a time you joined a project and discovered that the technical approach already in use was not how you would have done it — and you had to be productive anyway.",
+    "competency": "adaptability",
+    "tip": "Google assesses whether you can operate effectively in environments you didn't design — quickly learning existing context before suggesting changes.",
+    "followUps": [
+      "How did you decide which parts of the existing approach to accept versus which to propose changing?",
+      "What did deep familiarity with the existing approach teach you that you wouldn't have learned otherwise?"
+    ]
+  },
+  {
+    "id": "adapt-02",
+    "question": "Describe a time when a business priority shift mid-sprint caused you to abandon significant work you had nearly completed. How did you handle it?",
+    "competency": "adaptability",
+    "tip": "Google wants to see that you can process disappointment quickly, reprioritize cleanly, and carry forward usable lessons from the abandoned work.",
+    "followUps": [
+      "How did you avoid letting sunk-cost thinking color your response to the change?",
+      "What, if anything, did you salvage or document from the abandoned work for future use?"
+    ]
+  },
+  {
+    "id": "adapt-03",
+    "question": "Tell me about a time you were asked to learn a language, framework, or platform you had no experience with and deliver something production-ready within weeks.",
+    "competency": "adaptability",
+    "tip": "Google evaluates your learning strategy under time pressure — how you identify what you need to know first, find reliable resources, and apply knowledge incrementally.",
+    "followUps": [
+      "How did you decide what to learn deeply versus what to pattern-match from existing knowledge?",
+      "What mistakes did you make due to gaps in your new knowledge, and how did you catch them?"
+    ]
+  },
+  {
+    "id": "adapt-04",
+    "question": "Give me an example of a time feedback from a user or customer forced you to fundamentally rethink a feature you had already built.",
+    "competency": "adaptability",
+    "tip": "Google values user-centric thinking and the ability to separate attachment to your implementation from commitment to the actual user need.",
+    "followUps": [
+      "How did you process the gap between what you built and what users needed without becoming defensive?",
+      "How did you involve the user or customer in the redesign to avoid the same mismatch?"
+    ]
+  },
+  {
+    "id": "adapt-05",
+    "question": "Tell me about a time you had to rapidly context-switch between two high-priority projects simultaneously without dropping the ball on either.",
+    "competency": "adaptability",
+    "tip": "Google is assessing your ability to manage cognitive load and handoff quality — structured context management, not just working longer hours.",
+    "followUps": [
+      "What system or habit did you use to pick up a thread after switching contexts without re-reading everything?",
+      "Which project suffered more from the split attention, and what would you do differently?"
+    ]
+  },
+  {
+    "id": "adapt-06",
+    "question": "Describe a time when you were wrong about a technical assumption that was central to a design you had already committed to. How did you course-correct?",
+    "competency": "adaptability",
+    "tip": "Google looks for intellectual honesty and speed-to-correction — admitting the error clearly, quantifying the impact, and proposing a path forward without drama.",
+    "followUps": [
+      "How did you communicate the course-correction to stakeholders who had already been told the original plan?",
+      "What check did you add to your design process to catch similar false assumptions earlier?"
+    ]
+  },
+  {
+    "id": "adapt-07",
+    "question": "Tell me about a time you had to operate in a period of significant organizational uncertainty — a reorg, a leadership change, or a strategic pivot — and still deliver your commitments.",
+    "competency": "adaptability",
+    "tip": "Google wants to see resilience and a bias toward action — continuing to execute on what is within your control while managing ambiguity about what is not.",
+    "followUps": [
+      "How did you help your teammates navigate the uncertainty without adding to the anxiety?",
+      "How did you decide which commitments to protect versus which to renegotiate given the changed context?"
+    ]
+  },
+  {
+    "id": "goog-01",
+    "question": "Tell me about a time you chose a technically harder path because it was the right thing for users, even though the simpler path would have met the stated requirements.",
+    "competency": "googleyness",
+    "tip": "Google values engineers who hold themselves to a higher bar than the spec — they want to see genuine care for user experience, not just checkbox compliance.",
+    "followUps": [
+      "How did you justify the extra investment to stakeholders who were satisfied with the simpler solution?",
+      "How do you guard against this tendency becoming perfectionism that slows delivery?"
+    ]
+  },
+  {
+    "id": "goog-02",
+    "question": "Describe a time you identified something unethical or misaligned with company values in a project you were working on and raised it, even though doing so was uncomfortable.",
+    "competency": "googleyness",
+    "tip": "Google expects engineers to act as ethical stewards of technology — they want to see that you surface concerns through appropriate channels with clarity and courage.",
+    "followUps": [
+      "How did you decide the right level to raise the concern at — direct manager, skip-level, or broader?",
+      "What was the outcome, and how did it affect your trust in the organization?"
+    ]
+  },
+  {
+    "id": "goog-03",
+    "question": "Tell me about a time you did something for the long-term health of your team or codebase with zero personal credit — nobody would ever know it was you.",
+    "competency": "googleyness",
+    "tip": "Google assesses intrinsic motivation — they want engineers who invest in the commons because it's right, not because it's visible.",
+    "followUps": [
+      "How do you decide how much anonymous investment to make versus work that advances your own visibility?",
+      "Looking back, did the anonymous contribution end up benefiting you indirectly in any way?"
+    ]
+  },
+  {
+    "id": "goog-04",
+    "question": "Give me an example of a time you actively sought out negative feedback on something you built, even though the initial reception was positive.",
+    "competency": "googleyness",
+    "tip": "Google values a growth mindset and intellectual humility — seeking out criticism shows you care more about the quality of the output than protecting your ego.",
+    "followUps": [
+      "What specific questions did you ask to surface the critical feedback that wasn't being volunteered?",
+      "What was the most useful piece of criticism you uncovered, and what did you change as a result?"
+    ]
+  },
+  {
+    "id": "goog-05",
+    "question": "Tell me about a time you had significant domain expertise that colleagues lacked, and you deliberately slowed down to build their understanding rather than just using your expertise to move faster.",
+    "competency": "googleyness",
+    "tip": "Google values knowledge sharing as a multiplier — they want engineers who see investment in others' growth as part of their own job, not a distraction from it.",
+    "followUps": [
+      "How did you calibrate how much time to invest in teaching versus delivering, given your deadline?",
+      "What was the measurable outcome for the colleague's capability after that investment?"
+    ]
+  },
+  {
+    "id": "goog-06",
+    "question": "Describe a time you held a strong opinion about a product or technical direction but updated your position completely after a conversation with a user or with data.",
+    "competency": "googleyness",
+    "tip": "Google wants 'strong opinions, loosely held' — they're looking for the speed and genuineness of the update, not just a polite capitulation.",
+    "followUps": [
+      "What specifically in the conversation or data caused the update — what was the pivotal moment?",
+      "How did you communicate your position change to colleagues who knew your original view?"
+    ]
+  },
+  {
+    "id": "goog-07",
+    "question": "Tell me about a time you contributed meaningfully to something outside your team's scope — an open-source project, an internal tool, a documentation effort — because you thought it would make the company better.",
+    "competency": "googleyness",
+    "tip": "Google values 'beyond your lane' contributions that demonstrate you think about the organization's health, not just your team's output.",
+    "followUps": [
+      "How did you carve out time for this while still meeting your core team commitments?",
+      "What was the concrete impact, and how did you measure or observe it?"
+    ]
+  }
+]

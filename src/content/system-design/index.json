@@ -1,0 +1,72 @@
+[
+  {
+    "id": "url-shortener",
+    "title": "URL Shortener",
+    "difficulty": "Foundational",
+    "googleRelevance": "Google operates goo.gl and Firebase Dynamic Links, requiring the same hash-collision-free encoding and redirect latency guarantees at global scale.",
+    "tags": ["hashing", "databases", "key-value store", "scalability", "caching"]
+  },
+  {
+    "id": "rate-limiter",
+    "title": "Rate Limiter",
+    "difficulty": "Foundational",
+    "googleRelevance": "Every Google API surface (Maps, YouTube Data API, Cloud APIs) enforces per-client quotas, making rate-limiter design a first-class infrastructure concern.",
+    "tags": ["distributed systems", "caching", "algorithms", "API design", "sliding window"]
+  },
+  {
+    "id": "key-value-store",
+    "title": "Key-Value Store",
+    "difficulty": "Foundational",
+    "googleRelevance": "Google's Bigtable is a wide-column key-value store that underpins Gmail, Google Search indexing, and Google Analytics at planetary scale.",
+    "tags": ["distributed systems", "consistency", "replication", "hashing", "databases"]
+  },
+  {
+    "id": "news-feed",
+    "title": "News Feed",
+    "difficulty": "Intermediate",
+    "googleRelevance": "Google Discover serves personalized content feeds to over a billion users daily, sharing the fan-out-on-write vs. fan-out-on-read trade-offs central to this design.",
+    "tags": ["fan-out", "caching", "ranking", "social graph", "scalability"]
+  },
+  {
+    "id": "web-crawler",
+    "title": "Web Crawler",
+    "difficulty": "Intermediate",
+    "googleRelevance": "Googlebot is one of the largest distributed crawlers ever built, making politeness policies, deduplication, and crawl scheduling core to Google Search infrastructure.",
+    "tags": ["distributed systems", "queues", "deduplication", "graph traversal", "storage"]
+  },
+  {
+    "id": "search-autocomplete",
+    "title": "Search Autocomplete",
+    "difficulty": "Intermediate",
+    "googleRelevance": "Google Search's autocomplete (Google Suggest) must return ranked completions in under 100 ms for billions of queries daily, making trie vs. prefix-index trade-offs directly applicable.",
+    "tags": ["trie", "ranking", "caching", "real-time", "databases"]
+  },
+  {
+    "id": "notification-system",
+    "title": "Notification System",
+    "difficulty": "Intermediate",
+    "googleRelevance": "Firebase Cloud Messaging (FCM) delivers billions of push notifications daily across Android, iOS, and web, requiring the same fan-out and delivery-guarantee decisions covered in this design.",
+    "tags": ["message queues", "fan-out", "push vs pull", "reliability", "scalability"]
+  },
+  {
+    "id": "distributed-cache",
+    "title": "Distributed Cache",
+    "difficulty": "Advanced",
+    "googleRelevance": "Google uses a proprietary distributed cache called 'Memcache at Scale' (documented in a 2013 NSDI paper) to absorb billions of reads per second across their data centers.",
+    "tags": ["consistent hashing", "eviction policies", "replication", "availability", "distributed systems"]
+  },
+  {
+    "id": "ride-sharing-backend",
+    "title": "Ride-Sharing Backend",
+    "difficulty": "Advanced",
+    "googleRelevance": "Google Maps Platform provides the location, routing, and ETA services that every ride-sharing company (including Waymo) relies on, making geo-indexing and real-time matching directly relevant.",
+    "tags": ["geospatial", "real-time", "matching algorithms", "WebSockets", "databases"]
+  },
+  {
+    "id": "video-streaming-platform",
+    "title": "Video Streaming Platform",
+    "difficulty": "Advanced",
+    "googleRelevance": "YouTube, owned by Google, streams over 500 hours of video uploaded per minute to 2 billion users, making CDN design, adaptive bitrate streaming, and encoding pipelines core Google infrastructure problems.",
+    "tags": ["CDN", "encoding", "streaming", "scalability", "storage"]
+  }
+]
